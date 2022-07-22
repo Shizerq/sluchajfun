@@ -39,7 +39,8 @@ export const Content = styled.div`
 `;
 
 export const Logo = styled.h1`
-  color: ${({ theme }) => theme.text};
+  color: black;
+  padding-right: 200px;
   font-family: "Roboto Serif", serif;
   text-transform: uppercase;
   width: max-content;

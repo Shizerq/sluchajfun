@@ -53,11 +53,11 @@ export function Game({
       <Styled.Buttons>
         <Button onClick={skip}>
           {currentTry === 5
-            ? "Poddaj się"
-            : `Pomiń +${playTimes[currentTry] / 1000}s`}
+            ? "Give up"
+            : `Skip +${playTimes[currentTry] / 1000}s`}
         </Button>
         <Button variant="green" onClick={guess}>
-          Zgadnij
+          Enter
         </Button>
       </Styled.Buttons>
     </>

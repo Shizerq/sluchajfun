@@ -18,7 +18,7 @@ export function Guess({ guess, isCorrect, active }: Props) {
     if (song) {
       setText(`${song.artist} - ${song.name}`);
     } else if (skipped) {
-      setText("Pominięto");
+      setText("Omitted");
     } else {
       setText("");
     }

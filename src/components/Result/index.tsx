@@ -22,40 +22,39 @@ export function Result({
   guesses,
   currentTry,
 }: Props) {
-  const hoursToNextDay = Math.floor(
-    (new Date(new Date().setHours(24, 0, 0, 0)).getTime() -
-      new Date().getTime()) /
-      1000 /
-      60 /
-      60
-  );
+  const hoursToNextDay = 0;//Math.floor(
+  //   (new Date(new Date().setHours(24, 0, 0, 0)).getTime() -
+  //     new Date().getTime()) /
+  //     1000 /
+  //     60 /
+  //     60
+  // );
 
-  const textForTry = ["Wow!", "Świetnie", "Nieźle", "Super", "Dobrze"];
+  const textForTry = ["Wow!", "Good Job", "Nice!", "Super", "Smart"];
 
   if (didGuess) {
     const copyResult = React.useCallback(() => {
       navigator.clipboard.writeText(scoreToEmoji(guesses));
     }, [guesses]);
 
-    const triesConjugation = currentTry === 1 ? "próbie" : "próbach";
+    const triesConjugation = currentTry === 1 ? "try" : "tries";
 
     return (
       <>
         <Styled.ResultTitle>{textForTry[currentTry - 1]}</Styled.ResultTitle>
         <Styled.SongTitle>
-          Dzisiejsza piosenka, to {todaysSolution.artist} -{" "}
+        {todaysSolution.artist} -{" "}
           {todaysSolution.name}
         </Styled.SongTitle>
         <Styled.Tries>
-          Udało Ci się zgadnąć w {currentTry} {triesConjugation}
+         You guessed it in: {currentTry} {triesConjugation}
         </Styled.Tries>
         <YouTube id={todaysSolution.youtubeId} />
         <Button onClick={copyResult} variant="green">
-          Skopiuj wynik
+          Copy Results
         </Button>
         <Styled.TimeToNext>
-          Pamiętaj, by wrócić jutro - następny Słuchaj.fun za: {hoursToNextDay}{" "}
-          godzin!
+          Be sure to come back in: {hoursToNextDay}{" "}
         </Styled.TimeToNext>
       </>
     );
@@ -64,13 +63,12 @@ export function Result({
       <>
         <Styled.ResultTitle>Niestety, nie udało się...</Styled.ResultTitle>
         <Styled.SongTitle>
-          Dzisiejsza piosenka, to {todaysSolution.artist} -{" "}
+          Today's song: {todaysSolution.artist} -{" "}
           {todaysSolution.name}
         </Styled.SongTitle>
         <YouTube id={todaysSolution.youtubeId} />
         <Styled.TimeToNext>
-          Spróbuj ponownie jutro - następny Słuchaj.fun za: {hoursToNextDay}{" "}
-          godzin!
+          Play again in: {hoursToNextDay}{" "}!
         </Styled.TimeToNext>
       </>
     );
