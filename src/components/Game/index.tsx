@@ -3,7 +3,7 @@ import React from "react";
 import { GuessType } from "../../types/guess";
 import { Song } from "../../types/song";
 import { playTimes } from "../../constants";
-
+import "./index.css";
 import { Button, Guess, Player, Search, Result } from "../";
 
 import * as Styled from "./index.styled";
@@ -49,7 +49,6 @@ export function Game({
       ))}
       <Player id={todaysSolution.youtubeId} currentTry={currentTry} />
       <Search currentTry={currentTry} setSelectedSong={setSelectedSong} />
-
       <Styled.Buttons>
         <Button onClick={skip}>
           {currentTry === 5

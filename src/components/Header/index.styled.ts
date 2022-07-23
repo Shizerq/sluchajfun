@@ -40,6 +40,7 @@ export const Content = styled.div`
 
 export const Logo = styled.h1`
   color: black;
+  padding-top:15px ;
   padding-right: 200px;
   font-family: "Roboto Serif", serif;
   text-transform: uppercase;

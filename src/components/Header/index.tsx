@@ -10,7 +10,7 @@ interface Props {
 export function Header({ openInfoPopUp }: Props) {
   const logo = require('./vevo.png');
   return (
-    <Styled.Container>
+    <Styled.Container className="head">
       <Styled.Content>
         <IoInformationCircleOutline
           onClick={openInfoPopUp}

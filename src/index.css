@@ -3,6 +3,27 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ac8d7f;
-  color: white;
+  background-color: #fdf6e3;
+  color: 	#c37a67;
+}
+.line1{
+  width: 100%;
+  height: 45px;
+  position:relative;
+}
+
+.line1::after,.line1::before{
+  content: '';
+  position: absolute;
+  margin:auto;
+  height: 2px;
+  background:red;
+  top:30%;
+}
+.line1::after{
+  left:0;
+
+}
+.line1::before{
+  right:0;
 }

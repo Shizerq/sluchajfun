@@ -24,7 +24,7 @@ export function InfoPopUp({ onClose }: Props) {
           <IoHelpCircleOutline size={50} />
           
         </Styled.Section>
-        <Button variant="green" style={{ marginTop: 20 }} onClick={onClose}>
+        <Button variant="background100" style={{ marginTop: 20 }} onClick={onClose}>
           Enter
         </Button>
       </Styled.PopUp>

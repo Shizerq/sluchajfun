@@ -1,3 +1,9 @@
 .vlogo{
+    padding-top: 15px;
     width: 100px;
+}
+.foot{
+    text-align: center;
+    background-color:#c37a67;
+    height: 50px;
 }

@@ -23,7 +23,7 @@ export const PopUp = styled.div`
   }
   padding: 20px;
 
-  background-color: ${({ theme }) => theme.background100};
+  background-color: ${({ theme }) => theme.green};
 
   border-radius: 10px;
 
