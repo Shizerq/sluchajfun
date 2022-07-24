@@ -4,7 +4,7 @@ import { GuessType } from "../../types/guess";
 import { Song } from "../../types/song";
 import { playTimes } from "../../constants";
 import "./index.css";
-import {ethers} from 'ethers';
+import { ethers } from "ethers";
 import { Button, Guess, Player, Search, Result } from "../";
 import * as Styled from "./index.styled";
 
@@ -13,7 +13,7 @@ import * as Styled from "./index.styled";
 //import musicviddle from './utils/MusicViddle.json';
 //fill in address
 const mVAddress = "";
-declare var window: any
+declare const window: any;
 const { ethereum } = window;
 interface Props {
   guesses: GuessType[];
@@ -44,15 +44,18 @@ export function Game({
       />
     );
   }
-async function guesser(mVguess){
+  async function guesser(mVguess: any) {
     if (ethereum) {
       const provider = new ethers.providers.Web3Provider(ethereum);
       const signer = provider.getSigner();
-      const connectedContract = new ethers.Contract(mVAddress, mV.abi, signer);
-  
+      const connectedContract = new ethers.Contract(
+        mVAddress,
+        mVguess.abi,
+        signer
+      );
+
       const tx = await connectedContract.guess(mVguess);
       await tx.wait();
-
     }
   }
   return (

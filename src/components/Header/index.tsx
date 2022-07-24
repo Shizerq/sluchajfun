@@ -8,7 +8,6 @@ interface Props {
 }
 
 export function Header({ openInfoPopUp }: Props) {
-  const logo = require('./vevo.png');
   return (
     <Styled.Container className="head">
       <Styled.Content>
@@ -18,8 +17,8 @@ export function Header({ openInfoPopUp }: Props) {
           width={30}
           height={30}
         />
-        <img className="vlogo" src={logo}/>
-        <Styled.Logo>Guesser</Styled.Logo>
+        <Styled.Logo>Music Viddle</Styled.Logo>
+
         <a href="#"></a>
       </Styled.Content>
     </Styled.Container>

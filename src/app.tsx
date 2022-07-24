@@ -26,12 +26,12 @@ function App() {
   const [selectedSong, setSelectedSong] = React.useState<Song>();
   const [didGuess, setDidGuess] = React.useState<boolean>(false);
 
-  const firstRun = true;//localStorage.getItem("firstRun") === null;
+  const firstRun = true;
   let stats = JSON.parse(localStorage.getItem("stats") || "{}");
 
   React.useEffect(() => {
     if (Array.isArray(stats)) {
-      const visitedToday = false;//_.isEqual(
+      const visitedToday = false; //_.isEqual(
       //   todaysSolution,
       //   stats[stats.length - 1].solution
       // );
