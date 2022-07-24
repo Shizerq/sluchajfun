@@ -24,4 +24,15 @@ export const songs = [
     name: "I Want You Back",
     youtubeId: "s3Q80mk7bxE",
   },
+  {
+    artist: "a-ha",
+    name: "Take on Me",
+    youtubeId: "NaQ083rNUwc",
+  },
+  {
+    artist: "Daft Punk",
+    name: "Get Lucky",
+    youtubeId: "NaQ083rNUwc",
+  },
+  
 ];
